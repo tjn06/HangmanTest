@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textSize="@dimen/txtTitle"
+        android:textColor="@color/purple_200"
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="Hangman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:textSize="@dimen/txtWordToBeGuessed"
+        android:id="@+id/txtWordToBeGuessed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerText"
+        android:padding="2dp"
+        android:text="Word"
+        app:layout_constraintBottom_toTopOf="@+id/edtInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <EditText
+        android:maxLength="1"
+        android:id="@+id/edtInput"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/txtWordToBeGuessed"
+        android:hint="Input one letter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <TextView
+        android:id="@+id/txtTriesLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" X X X X X"
+        app:layout_constraintBottom_toTopOf="@+id/txtLettersTried"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLettersTried"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/txtLettersTried"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Letters used"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtInput"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetGame"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTriesLeft"
+        app:layout_constraintVertical_bias="0.059" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--        android:layout_toRightOf-->
+<!--<LinearLayout-->
+<!--android:id="@+id/linear_char"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_below="@+id/btnReset"-->
+<!--android:layout_gravity="center"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintHorizontal_bias="0.493"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/edtInput">-->
+
+<!--<TextView-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="2dp"-->
+<!--    android:text="B"-->
+<!--    tools:layout_editor_absoluteX="190dp"-->
+<!--    tools:layout_editor_absoluteY="428dp" />-->
+
+<!--<TextView-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="2dp"-->
+<!--    android:text="G" />-->
+
+<!--</LinearLayout>-->

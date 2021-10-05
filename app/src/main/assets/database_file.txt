@@ -1,0 +1,11 @@
+word
+application
+black
+    green
+yellow
+gray
+red
+purple
+pink
+random
+hello
